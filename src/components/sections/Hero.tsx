@@ -43,14 +43,15 @@ export default function Hero() {
                     transition={{ delay: 0.4 }}
                     className="text-xl text-gray-500 mb-4"
                 >
-                    <span className="bg-linear-to-r from-indigo-500 to-pink-500 text-transparent bg-clip-text">
+                    <span className="bg-linear-to-r from-indigo-500 to-pink-500 text-2xl text-transparent bg-clip-text">
                         <TypingText
                             words={[
                                 "Full-Stack Developer",
                                 "Next.js Specialist",
                                 "React Engineer",
                                 "Backend API Builder",
-                                "Software Engineer"
+                                "Software Engineer",
+                                "5+ Years Experience"
                             ]}
                             speed={60} deleteSpeed={40} pause={2000}
                         />
