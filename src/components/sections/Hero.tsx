@@ -3,8 +3,11 @@
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
 import TypingText from "@/components/ui/TypingText";
+import { useTheme } from "next-themes";
 
 export default function Hero() {
+    const { theme } = useTheme();
+
     return (
         <section id="home" className="h-[70vh] flex flex-col items-center justify-center text-center">
             {/* Background Decoration Layer */}
@@ -62,7 +65,8 @@ export default function Hero() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.4 }}
-                    className="text-l text-gray-500 mb-8 flex items-center justify-center gap-2"
+                    className={`text-l  mb-8 flex items-center
+                        ${theme === 'dark' ? 'text-gray-200' : 'text-gray-500'} justify-center gap-2`}
                 >
                     <MapPin size={18} /> Cairo, Egypt
                 </motion.p>

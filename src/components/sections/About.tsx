@@ -2,20 +2,47 @@
 import Container from "../ui/Container";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export default function About() {
+    const { theme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    // Prevent hydration mismatch
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    // if (!mounted) {
+    //     return (
+    //         <></>
+    //     );
+    // }
+
     return (
         <Container>
             <section id="about" className="h-auto w-full relative px-5 py-20 flex flex-col items-center justify-around text-center">
                 <div className="flex flex-col items-center justify-center mb-10">
-                    <h1 className="absolute text-[10rem] uppercase font-extrabold -top-10 text-black/5 dark:text-white/5 -z-10">About</h1>
-                    <h2 className=" relative text-6xl font-semibold">About Me</h2>
+                    <h1 className={`
+                        absolute text-[10rem] uppercase font-extrabold -top-10 -z-10
+                        ${theme === 'dark' ? 'text-white/5' : 'text-black/5'}
+                        transition-colors duration-300
+                    `}>
+                        About
+                    </h1>
+
+                    <h2 className="relative text-6xl font-semibold dark:text-white">About Me</h2>
+
                     <div className="flex justify-center items-center gap-2">
                         <span className="inline-block w-15 h-1 bg-linear-to-r from-indigo-600 to-indigo-500"></span>
                         <span className="text-indigo-600 text-3xl">•</span>
                         <span className="inline-block w-15 h-1 bg-linear-to-r from-indigo-500 to-indigo-600"></span>
                     </div>
-                    <div className="uppercase text-gray-500 text-sm font-medium">More about me</div>
+
+                    <div className="uppercase text-gray-500 dark:text-gray-400 text-sm font-medium">
+                        More about me
+                    </div>
                 </div>
 
                 <div className="flex md:flex-row sm:flex-col items-center justify-around gap-15">
@@ -37,11 +64,21 @@ export default function About() {
                             </motion.div>
                         </div>
                     </div>
-                    <p className="text-justify text-gray-500 font-normal font-sans leading-relaxed max-w-1/2">
-                        I am a dedicated Computer Science student at Cairo University with hands-on experience in full-stack web development using React, Spring
-                        Boot, and Django. Skilled in building responsive applications and collaborating on real-world projects.
-                        Seeking a Software Engineering Internship or Junior Developer opportunity to apply my technical skills and
-                        contribute to meaningful products. </p>
+                    <div className="w-fit max-w-1/2 flex flex-col align-start justify-start gap-10">
+                        <h2 className="relative w-full text-start text-3xl font-bold font-sans">
+                            <span className="underline underline-offset-[1.5rem] decoration-4 decoration-indigo-600">Hello!</span> I'm {""}
+                            <span className="bg-linear-to-r from-indigo-500 to-indigo-400 text-transparent bg-clip-text">
+                                Mariam
+                            </span>
+                        </h2>
+                        <p className={`text-justify ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'}
+                            font-normal font-sans leading-relaxed`}>
+                            I am a dedicated Computer Science student at Cairo University with hands-on experience in full-stack web development using React, Spring
+                            Boot, and Django. Skilled in building responsive applications and collaborating on real-world projects.
+                            Seeking a Software Engineering Internship or Junior Developer opportunity to apply my technical skills and
+                            contribute to meaningful products.
+                        </p>
+                    </div>
                 </div>
             </section>
         </Container>
