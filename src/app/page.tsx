@@ -8,13 +8,14 @@ import Skills from "@/components/sections/Skills";
 import Achievements from "@/components/sections/Achievements";
 import Testimonials from "@/components/sections/Testimonials";
 import Contact from "@/components/sections/Contact";
+import { hero, about } from "@/lib/data";
 
 export default function Home() {
   return (
     <main>
       <Navbar />
-      <Hero />
-      <About />
+      <Hero {...hero}/>
+      <About {...about}/>
       <Education />
       <Experience />
       <Projects />

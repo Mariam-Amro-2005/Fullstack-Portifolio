@@ -4,8 +4,17 @@ import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
 import TypingText from "@/components/ui/TypingText";
 import { useTheme } from "next-themes";
+import Link from "next/link";
+import Image from "next/image";
 
-export default function Hero() {
+interface HeroProps {
+    name: string;
+    typingWords: string[];
+    location: string;
+    email: string;
+}
+
+export default function Hero({ name="", typingWords=[""], location="", email="#" }: HeroProps) {
     const { theme } = useTheme();
 
     return (
@@ -37,7 +46,7 @@ export default function Hero() {
                     transition={{ duration: 0.7 }}
                     className="text-8xl font-bold mb-6"
                 >
-                    Mariam <span className="bg-linear-to-r from-indigo-500 to-pink-600 text-transparent bg-clip-text">Amro</span> Ahmed Fathi Seifeldin
+                    {name.split(" ")[0]} <span className="bg-linear-to-r from-indigo-500 to-pink-600 text-transparent bg-clip-text">{name.split(" ")[1]}</span> {name.split(" ")[2]} {name.split(" ")[3]} {name.split(" ")[4]}
                 </motion.h1>
 
                 <motion.p
@@ -48,14 +57,7 @@ export default function Hero() {
                 >
                     <span className="bg-linear-to-r from-indigo-500 to-pink-500 text-2xl text-transparent bg-clip-text">
                         <TypingText
-                            words={[
-                                "Full-Stack Developer",
-                                "Next.js Specialist",
-                                "React Engineer",
-                                "Backend API Builder",
-                                "Software Engineer",
-                                "5+ Years Experience"
-                            ]}
+                            words={typingWords}
                             speed={60} deleteSpeed={40} pause={2000}
                         />
                     </span>
@@ -65,12 +67,27 @@ export default function Hero() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.4 }}
-                    className={`text-l  mb-8 flex items-center
+                    className={`text-xl  mb-8 flex items-center
                         ${theme === 'dark' ? 'text-gray-200' : 'text-gray-500'} justify-center gap-2`}
                 >
-                    <MapPin size={18} /> Cairo, Egypt
+                    <MapPin size={20} /> {location}
                 </motion.p>
 
+                <div className="flex w-full justify-center items-center">
+                    <div className="flex flex-row w-fit bg-linear-to-tr from-indigo-600 to-purple-700 border rounded-full py-2.5 px-6 text-white text-lg font-semibold align-center justify-center items-center hover:scale-105 transition duration-400 cursor-pointer">
+                        <Link href={`${email}`} target="_blank" rel="noopener noreferrer" className="flex flex-row gap-3 items-center font-sans">
+                            <span className="flex flex-row">
+                                <Image
+                                    src="/icons/icons8-email-100 (1).png"
+                                    alt="Email"
+                                    width={30}
+                                    height={30}>
+                                </Image>
+                            </span>
+                            Let's Conntect
+                        </Link>
+                    </div>
+                </div>
             </div>
         </section>
     );
