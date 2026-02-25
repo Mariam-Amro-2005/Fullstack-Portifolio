@@ -47,7 +47,7 @@ export default function About(
                         ${theme === 'dark' ? 'text-white/5' : 'text-black/5'}
                         transition-colors duration-300
                     `}>
-                        About
+                        About Me
                     </h1>
 
                     <h2 className="relative text-6xl font-semibold dark:text-white">About Me</h2>
