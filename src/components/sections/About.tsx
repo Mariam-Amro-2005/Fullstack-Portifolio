@@ -43,11 +43,11 @@ export default function About(
             <section id="about" className="h-auto w-full relative px-10 py-20 flex flex-col items-center justify-around text-center font-sans">
                 <div className="flex flex-col items-center justify-center mb-10">
                     <h1 className={`
-                        absolute text-[10rem] uppercase font-extrabold -top-10 -z-10
+                        absolute text-7xl md:text-8xl lg:text-[10rem] uppercase font-extrabold top-12.75 lg:-top-10 -z-10
                         ${theme === 'dark' ? 'text-white/5' : 'text-black/5'}
-                        transition-colors duration-300
+                        transition-colors duration-300 break-all
                     `}>
-                        About Me
+                        About
                     </h1>
 
                     <h2 className="relative text-6xl font-semibold dark:text-white">About Me</h2>
@@ -97,8 +97,8 @@ export default function About(
                             </span>
                         </h2>
 
-                        <p className={`text-justify ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'}
-                            font-medium leading-relaxed text-lg
+                        <p className={`text-left ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'}
+                            font-medium leading-relaxed text-lg text-balance
                             pr-5 transition-colors duration-300`}>
                             {bio}
                         </p>

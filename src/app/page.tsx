@@ -8,7 +8,7 @@ import Skills from "@/components/sections/Skills";
 import Achievements from "@/components/sections/Achievements";
 import Testimonials from "@/components/sections/Testimonials";
 import Contact from "@/components/sections/Contact";
-import { hero, about } from "@/lib/data";
+import { hero, about, education } from "@/lib/data";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
       <Navbar />
       <Hero {...hero}/>
       <About {...about}/>
-      <Education />
+      <Education {...education}/>
       <Experience />
       <Projects />
       <Skills />

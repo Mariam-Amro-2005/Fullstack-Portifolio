@@ -18,7 +18,7 @@ export default function Hero({ name="", typingWords=[""], location="", email="#"
     const { theme } = useTheme();
 
     return (
-        <section id="home" className="h-[70vh] flex flex-col items-center justify-center text-center">
+        <section id="home" className="h-[70vh] flex flex-col items-center justify-center text-center font-sans">
             {/* Background Decoration Layer */}
             <div className="absolute inset-0 -z-10">
 

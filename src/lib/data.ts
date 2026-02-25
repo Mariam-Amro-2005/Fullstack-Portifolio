@@ -2,6 +2,35 @@ const Linkedin = "https://www.linkedin.com/in/mariam-seifeldin/";
 const Github = "https://github.com/Mariam-Amro-2005";
 const Email = "mariam.seifeldin.2005@gmail.com";
 const Location = "Cairo, Egypt";
+interface EducationItem {
+    degree: string
+    institution?: string
+    location?: string
+    startDate: string
+    endDate: string
+    description: string[]
+    tags: string[]
+}
+
+const BachelorsEdu: EducationItem = {
+    degree: "",
+    institution: "",
+    location: "",
+    startDate: "",
+    endDate: "",
+    description: [],
+    tags: []
+}
+
+const HighSchoolEdu: EducationItem = {
+    degree: "",
+    institution: "",
+    location: "",
+    startDate: "",
+    endDate: "",
+    description: [],
+    tags: []
+}
 
 export const projects = [
     {
@@ -37,4 +66,8 @@ export const hero = {
     ],
     location: Location,
     email: Email,
+}
+
+export const education = {
+    educations: [BachelorsEdu, HighSchoolEdu]
 }
