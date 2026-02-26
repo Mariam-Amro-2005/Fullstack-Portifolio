@@ -3,8 +3,9 @@ import Container from "../ui/Container";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import EducationCard from "../ui/EducationCard";
 
-interface EducationItem {
+export interface EducationItem {
     degree: string
     institution?: string
     location?: string
@@ -19,6 +20,7 @@ interface EducationProps {
 
 export default function Education(educationData: EducationProps) {
     const { theme } = useTheme();
+    const totalItems = educationData.educations.length;
     return (
         <Container>
             <section id="education" className="relative h-auto py-20 flex flex-col items-center justify-center text-center font-sans">
@@ -42,8 +44,14 @@ export default function Education(educationData: EducationProps) {
 
                 </div>
 
-                <div>
-                    
+                <div className="flex w-full sm:max-w-2xl gap-10">
+                    <ul className="relative list-disc list-outside marker:text-indigo-600 marker:text-lg">
+                        {educationData.educations.map((edu, index) => (
+                            <li key={index} className={`mb-10 relative ${index < totalItems - 1 ? "before:content-[''] before:absolute before:-left-4.25 before:top-13.5 before:h-[calc(100%+0.5rem)] before:w-1 before:bg-linear-to-b before:from-indigo-500 before:to-purple-400/50 before:rounded-full" : ""}`}>
+                                <EducationCard key={index} {...edu} />
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </section>
         </Container>

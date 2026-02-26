@@ -103,13 +103,13 @@ export default function About(
                             {bio}
                         </p>
 
-                        <div className="flex flex-col justify-start gap-5 lg:max-w-2/3">
+                        <div className="flex flex-col justify-start gap-5 max-w-3/4 sm:max-w-full lg:max-w-2/3">
                             <h1 className="text-start w-full text-xl font-bold">Connect with Me</h1>
                             <div className="flex flex-row w-full justify-between">
                                 <Link href={`${linkedin}`} target="_blank" rel="noopener noreferrer" >
-                                    <div className="border border-gray-300 w-fit h-fit rounded-full shadow-orange-50 hover:bg-indigo-500 hover:border-gray-400 p-3 transition duration-700 hover:shadow-lg">
+                                    <div className={`border border-gray-300 w-fit h-fit rounded-full ${theme == "dark" ? " shadow-gray-600 hover:bg-indigo-600/90" : "shadow-gray-500 hover:bg-indigo-500"} hover:border-gray-400 p-3 transition duration-300 hover:shadow-md`}>                                        
                                         <Image
-                                            src="/icons/icons8-linkedin-100.png"
+                                            src={`${theme == "dark"? "/icons/icons8-linkedin-white-100.png" : "/icons/icons8-linkedin-100.png"}`}
                                             alt="LinkedIn"
                                             width={25}
                                             height={25}
@@ -119,9 +119,9 @@ export default function About(
                                 </Link>
 
                                 <Link href={`${github}`} target="_blank" rel="noopener noreferrer">
-                                    <div className="border border-gray-300 w-fit h-fit rounded-full shadow-orange-50 hover:bg-indigo-500 hover:border-gray-400 p-3 transition duration-700 hover:shadow-lg">
+                                    <div className={`border border-gray-300 w-fit h-fit rounded-full ${theme == "dark" ? " shadow-gray-600 hover:bg-indigo-600/90" : "shadow-gray-500 hover:bg-indigo-500"} hover:border-gray-400 p-3 transition duration-300 hover:shadow-md`}>
                                         <Image
-                                            src="/icons/icons8-github-100.png"
+                                            src={`${theme == "dark" ? "/icons/icons8-github-white-100.png" : "/icons/icons8-github-100.png"}`}
                                             alt="GitHub"
                                             width={25}
                                             height={25}
@@ -131,9 +131,9 @@ export default function About(
                                 </Link>
 
                                 <Link href={`mailto:${email}`} >
-                                    <div className="border border-gray-300 w-fit h-fit rounded-full shadow-orange-50 hover:bg-indigo-500 hover:border-gray-400 p-3 transition duration-700 hover:shadow-lg">
+                                    <div className={`border border-gray-300 w-fit h-fit rounded-full ${theme == "dark" ? " shadow-gray-600 hover:bg-indigo-600/90" : "shadow-gray-500 hover:bg-indigo-500"} hover:border-gray-400 p-3 transition duration-300 hover:shadow-md`}>
                                         <Image
-                                            src="/icons/icons8-email-100.png"
+                                            src={`${theme == "dark" ? "/icons/icons8-email-100 (1).png" : "/icons/icons8-email-100.png"}`}
                                             alt="Email"
                                             width={25}
                                             height={25}
@@ -143,9 +143,9 @@ export default function About(
                                 </Link>
 
                                 <Link href={`tel:${phone}`}>
-                                    <div className="border border-gray-300 w-fit h-fit rounded-full shadow-orange-50 hover:bg-indigo-500 hover:border-gray-400 p-3 transition duration-700 hover:shadow-lg">
+                                    <div className={`border border-gray-300 w-fit h-fit rounded-full ${theme == "dark" ? " shadow-gray-600 hover:bg-indigo-600/90" : "shadow-gray-500 hover:bg-indigo-500"} hover:border-gray-400 p-3 transition duration-300 hover:shadow-md`}>
                                         <Image
-                                            src="/icons/icons8-phone-100.png"
+                                            src={`${theme == "dark" ? "/icons/icons8-phone-white-100.png" : "/icons/icons8-phone-100.png"}`}
                                             alt="Phone Number"
                                             width={25}
                                             height={25}
@@ -156,7 +156,7 @@ export default function About(
                             </div>
 
                             <Link href={`${resume}`} target="_blank" rel="noopener noreferrer">
-                                <div className="flex w-full bg-linear-to-tr from-indigo-600 to-purple-700 border rounded-full py-2 text-white text-lg font-semibold align-center justify-center items-center gap-3 hover:scale-105 transition duration-400 cursor-pointer">
+                                <div className={`flex w-fit bg-linear-to-tr from-indigo-600 to-purple-700 border ${theme == "dark" ? "border-purple-700 shadow-gray-700": "border-gray-500 shadow-gray-400"} rounded-full py-2 px-4 text-white text-lg font-semibold align-center justify-center items-center gap-3 shadow-md hover:scale-105 transition duration-400 cursor-pointer`}>
                                     <span className="flex flex-row">
                                         <Image
                                             src="/icons/icons8-download-100.png"
