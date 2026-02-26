@@ -6,13 +6,7 @@ import TypingText from "@/components/ui/TypingText";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import Image from "next/image";
-
-interface HeroProps {
-    name: string;
-    typingWords: string[];
-    location: string;
-    email: string;
-}
+import { HeroProps } from "@/lib/types";
 
 export default function Hero({ name="", typingWords=[""], location="", email="#" }: HeroProps) {
     const { theme } = useTheme();

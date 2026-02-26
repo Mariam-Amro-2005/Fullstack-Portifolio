@@ -4,19 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import EducationCard from "../ui/EducationCard";
-
-export interface EducationItem {
-    degree: string
-    institution?: string
-    location?: string
-    startDate: string
-    endDate: string
-    description: string[]
-    tags: string[]
-}
-interface EducationProps {
-    educations: EducationItem[]
-}
+import { EducationProps } from "@/lib/types";
 
 export default function Education(educationData: EducationProps) {
     const { theme } = useTheme();

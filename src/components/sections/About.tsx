@@ -5,17 +5,7 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-
-interface AboutProps {
-    photo: string
-    name: string
-    bio: string
-    linkedin: string
-    github: string
-    email: string
-    phone: string
-    resume: string
-}
+import { AboutProps } from "@/lib/types";
 
 export default function About(
     { photo="", name = "", bio = "", linkedin = "#", github = "#", email = "#", phone = "#", resume = "#" }: AboutProps

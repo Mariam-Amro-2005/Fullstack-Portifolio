@@ -8,7 +8,10 @@ import Skills from "@/components/sections/Skills";
 import Achievements from "@/components/sections/Achievements";
 import Testimonials from "@/components/sections/Testimonials";
 import Contact from "@/components/sections/Contact";
-import { hero, about, education } from "@/lib/data";
+import { hero, about, education,
+          experience, projects, skills, 
+          certifications, contact 
+        } from "@/lib/data";
 
 export default function Home() {
   return (
