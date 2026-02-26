@@ -44,7 +44,7 @@ export default function Education(educationData: EducationProps) {
 
                 </div>
 
-                <div className="flex w-full sm:max-w-2xl gap-10">
+                <div className="flex w-full max-w-full sm:max-w-2xl lg:max-w-5/6 justify-center gap-10">
                     <ul className="relative list-disc list-outside marker:text-indigo-600 marker:text-lg">
                         {educationData.educations.map((edu, index) => (
                             <li key={index} className={`mb-10 relative ${index < totalItems - 1 ? "before:content-[''] before:absolute before:-left-4.25 before:top-13.5 before:h-[calc(100%+0.5rem)] before:w-1 before:bg-linear-to-b before:from-indigo-500 before:to-purple-400/50 before:rounded-full" : ""}`}>
