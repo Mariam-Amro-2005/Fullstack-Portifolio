@@ -9,8 +9,8 @@ import Achievements from "@/components/sections/Achievements";
 import Testimonials from "@/components/sections/Testimonials";
 import Contact from "@/components/sections/Contact";
 import { hero, about, education,
-          experience, projects, skills, 
-          certifications, contact 
+          experience, project, skill, 
+          achievement, contact 
         } from "@/lib/data";
 
 export default function Home() {
@@ -20,7 +20,7 @@ export default function Home() {
       <Hero {...hero}/>
       <About {...about}/>
       <Education {...education}/>
-      <Experience />
+      <Experience {...experience} />
       <Projects />
       <Skills />
       <Achievements />

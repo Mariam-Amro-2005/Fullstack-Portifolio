@@ -3,8 +3,10 @@ import Container from "../ui/Container";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import { ExperienceProps } from "@/lib/types";
+import ExperienceCard from "../ui/ExperienceCard";
 
-export default function Experience() {
+export default function Experience( experience: ExperienceProps) {
     const { theme } = useTheme();
 
     return (
@@ -28,6 +30,12 @@ export default function Experience() {
                         <span className="inline-block w-15 h-1 bg-linear-to-r from-indigo-500 to-indigo-600"></span>
                     </div>
 
+                </div>
+
+                <div>
+                    {experience.experiences.map((exp, index) => (
+                        <ExperienceCard key={index} {...exp} />
+                    ))}
                 </div>
             </section>
         </Container>

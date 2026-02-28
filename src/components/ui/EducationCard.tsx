@@ -13,8 +13,8 @@ export default function EducationCard(data: EducationItem) {
             <div id="educationCard" className={`w-full border h-auto rounded-2xl p-6 
                 flex flex-col justify-start gap-2.5 font-sans transition-all duration-300 
                 ease-out hover:-translate-y-3 hover:shadow-2xl transform
-                ${theme == "dark" ? "hover:border-blue-800 border-gray-700 text-white" : 
-                "border-gray-300 hover:bg-linear-to-br hover:from-indigo-300/50 hover:border-purple-400/50"}`}>
+                ${theme == "dark" ? "hover:border-blue-800 border-gray-700 text-white hover:text-blue-600" : 
+                "border-gray-300 hover:bg-linear-to-br hover:from-indigo-300/50 hover:border-purple-400/50 hover:text-indigo-600"}`}>
                 <div id="dateTag" className="">
                     <p className={`w-fit text-start text-sm text-indigo-600/85 font-medium border rounded-full py-1.5 px-4 
                         ${theme == "dark" ? "border-blue-800 bg-indigo-600/20 text-blue-600" : "border-purple-400/70 bg-purple-400/20"}`}>
@@ -23,7 +23,7 @@ export default function EducationCard(data: EducationItem) {
                 </div>
 
                 <div id="headings" className="flex flex-col justify-start text-start gap-5 pl-2">
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col gap-1">
                         <div className="flex gap-2 items-start">
                         <Image 
                             src="/icons/icons8-education-100.png" 
@@ -37,7 +37,7 @@ export default function EducationCard(data: EducationItem) {
                         </div>
 
                         <div className="flex gap-5 justify-between">
-                            <h3 className={`text-lg  font-normal max-w-3/4 ${theme == "dark" ? "text-gray-400 hover:text-blue-600" : "hover:text-indigo-600 text-gray-500"}`}>
+                            <h3 className={`text-lg font-normal max-w-3/4 ${theme == "dark" ? "text-gray-400 hover:text-blue-600" : "hover:text-indigo-600 text-gray-500"}`}>
                                 {data.institution || "N/A"}
                             </h3>
 
@@ -50,7 +50,7 @@ export default function EducationCard(data: EducationItem) {
                     <div>
                         <ul className="list-disc list-inside marker:text-indigo-600 marker:text-lg text-gray-500">
                             {data.description.map((desc, index) => (
-                                <li key={index} className={`${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'}`}>{desc}</li>
+                                <li key={index} className={`mb-1 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'}`}>{desc}</li>
                             ))}
                         </ul>
                     </div>
