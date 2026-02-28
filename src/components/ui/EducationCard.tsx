@@ -3,7 +3,7 @@ import Container from "./Container";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import { EducationItem } from "../sections/Education";
+import { EducationItem } from "@/lib/types";
 
 export default function EducationCard(data: EducationItem) {
     const { theme } = useTheme();
@@ -50,7 +50,7 @@ export default function EducationCard(data: EducationItem) {
                     <div>
                         <ul className="list-disc list-inside marker:text-indigo-600 marker:text-lg text-gray-500">
                             {data.description.map((desc, index) => (
-                                <li key={index}>{desc}</li>
+                                <li key={index} className={`${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'}`}>{desc}</li>
                             ))}
                         </ul>
                     </div>
