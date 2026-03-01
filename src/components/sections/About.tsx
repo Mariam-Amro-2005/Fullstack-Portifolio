@@ -97,7 +97,7 @@ export default function About(
                             <h1 className="text-start w-full text-xl font-bold">Connect with Me</h1>
                             <div className="flex flex-row w-full justify-between">
                                 <Link href={`${linkedin}`} target="_blank" rel="noopener noreferrer" >
-                                    <div className={`border border-gray-300 w-fit h-fit rounded-full ${theme == "dark" ? " shadow-gray-600 hover:bg-indigo-600/90" : "shadow-gray-500 hover:bg-indigo-500"} hover:border-gray-400 p-3 transition duration-300 hover:shadow-md`}>                                        
+                                    <div className={`border border-gray-300 w-fit h-fit rounded-full hover:bg-linear-to-tr ${theme == "dark" ? " shadow-gray-600 hover:from-indigo-800 hover:via-indigo-600 hover:to-blue-950" : "shadow-gray-500 hover:from-purple-600 hover:via-violet-400 hover:to-indigo-500 hover:border-purple-600"} hover:border-gray-400 p-3 transition duration-300 hover:shadow-md`}>                                        
                                         <Image
                                             src={`${theme == "dark"? "/icons/icons8-linkedin-white-100.png" : "/icons/icons8-linkedin-100.png"}`}
                                             alt="LinkedIn"
@@ -109,7 +109,7 @@ export default function About(
                                 </Link>
 
                                 <Link href={`${github}`} target="_blank" rel="noopener noreferrer">
-                                    <div className={`border border-gray-300 w-fit h-fit rounded-full ${theme == "dark" ? " shadow-gray-600 hover:bg-indigo-600/90" : "shadow-gray-500 hover:bg-indigo-500"} hover:border-gray-400 p-3 transition duration-300 hover:shadow-md`}>
+                                    <div className={`border border-gray-300 w-fit h-fit rounded-full hover:bg-linear-to-tr ${theme == "dark" ? " shadow-gray-600 hover:from-indigo-800 hover:via-indigo-600 hover:to-blue-950" : "shadow-gray-500 hover:from-purple-600 hover:via-violet-400 hover:to-indigo-500 hover:border-purple-600"} hover:border-gray-400 p-3 transition duration-300 hover:shadow-md`}>
                                         <Image
                                             src={`${theme == "dark" ? "/icons/icons8-github-white-100.png" : "/icons/icons8-github-100.png"}`}
                                             alt="GitHub"
@@ -121,7 +121,7 @@ export default function About(
                                 </Link>
 
                                 <Link href={`mailto:${email}`} >
-                                    <div className={`border border-gray-300 w-fit h-fit rounded-full ${theme == "dark" ? " shadow-gray-600 hover:bg-indigo-600/90" : "shadow-gray-500 hover:bg-indigo-500"} hover:border-gray-400 p-3 transition duration-300 hover:shadow-md`}>
+                                    <div className={`border border-gray-300 w-fit h-fit rounded-full hover:bg-linear-to-tr ${theme == "dark" ? " shadow-gray-600 hover:from-indigo-800 hover:via-indigo-600 hover:to-blue-950" : "shadow-gray-500 hover:from-purple-600 hover:via-violet-400 hover:to-indigo-500 hover:border-purple-600"} hover:border-gray-400 p-3 transition duration-300 hover:shadow-md`}>
                                         <Image
                                             src={`${theme == "dark" ? "/icons/icons8-email-100 (1).png" : "/icons/icons8-email-100.png"}`}
                                             alt="Email"
@@ -133,7 +133,7 @@ export default function About(
                                 </Link>
 
                                 <Link href={`tel:${phone}`}>
-                                    <div className={`border border-gray-300 w-fit h-fit rounded-full ${theme == "dark" ? " shadow-gray-600 hover:bg-indigo-600/90" : "shadow-gray-500 hover:bg-indigo-500"} hover:border-gray-400 p-3 transition duration-300 hover:shadow-md`}>
+                                    <div className={`border border-gray-300 w-fit h-fit rounded-full hover:bg-linear-to-tr ${theme == "dark" ? " shadow-gray-600 hover:from-indigo-800 hover:via-indigo-600 hover:to-blue-950" : "shadow-gray-500 hover:from-purple-600 hover:via-violet-400 hover:to-indigo-500 hover:border-purple-600"} hover:border-gray-400 p-3 transition duration-300 hover:shadow-md`}>
                                         <Image
                                             src={`${theme == "dark" ? "/icons/icons8-phone-white-100.png" : "/icons/icons8-phone-100.png"}`}
                                             alt="Phone Number"
@@ -146,7 +146,7 @@ export default function About(
                             </div>
 
                             <Link href={`${resume}`} target="_blank" rel="noopener noreferrer">
-                                <div className={`flex w-fit bg-linear-to-tr from-indigo-600 to-purple-700 border ${theme == "dark" ? "border-purple-700 shadow-gray-700": "border-gray-500 shadow-gray-400"} rounded-full py-2 px-4 text-white text-lg font-semibold align-center justify-center items-center gap-3 shadow-md hover:scale-105 transition duration-400 cursor-pointer`}>
+                                <div className={`flex w-fit bg-linear-to-tr  border ${theme == "dark" ? "border-indigo-700 shadow-gray-700 from-indigo-800 via-indigo-600 to-blue-950": " shadow-gray-400 from-purple-600 via-violet-500 to-indigo-600 border-purple-500"} rounded-full py-2 px-4 text-white text-lg font-semibold align-center justify-center items-center gap-3 shadow-md hover:scale-105 transition duration-400 cursor-pointer`}>
                                     <span className="flex flex-row">
                                         <Image
                                             src="/icons/icons8-download-100.png"

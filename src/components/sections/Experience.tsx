@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 import { ExperienceProps } from "@/lib/types";
 import ExperienceCard from "../ui/ExperienceCard";
 
-export default function Experience( experience: ExperienceProps) {
+export default function Experience(experience: ExperienceProps) {
     const { theme } = useTheme();
 
     return (
