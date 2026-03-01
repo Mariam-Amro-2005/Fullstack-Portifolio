@@ -258,7 +258,7 @@ const MindersAchievment: AchievementItem = {
 }
 
 export const achievement: AchievementsProps = {
-    achievements: []
+    achievements: [MindersAchievment]
 }
 
 export const certificate: CertificationsProps = {

@@ -23,9 +23,8 @@ export default function Home() {
       <Experience {...experience} />
       <Projects {...project}/>
       <Skills {...skill}/>
-      <Achievements />
-      <Testimonials />
-      <Contact />
+      <Achievements {...achievement}/>
+      <Contact {...contact}/>
     </main>
   );
 }
