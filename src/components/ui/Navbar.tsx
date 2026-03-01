@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import ThemeToggle from "./ThemeToggle";
+import { useTheme } from "next-themes";
 
 const sections = [
     "about",
@@ -10,12 +11,13 @@ const sections = [
     "experience",
     "projects",
     "skills",
-    "certifications",
+    "achievements",
     "contact",
 ];
 
 export default function Navbar() {
     const [active, setActive] = useState("");
+    const { theme } = useTheme();
 
     useEffect(() => {
         const observers: IntersectionObserver[] = [];
@@ -43,7 +45,7 @@ export default function Navbar() {
     const linkStyle = (id: string) =>
         `transition hover:text-indigo-600 underline-offset-8 decoration-2
         ${active === id
-            ? "underline decoration-pink-600 decoration-2 underline-offset-2 hover:decoration-indigo-500"
+            ? `underline  decoration-2 underline-offset-2  ${theme == "dark" ? "decoration-blue-600 hover:decoration-indigo-400" : "decoration-pink-600 hover:decoration-indigo-500"}`
             : "no-underline hover:underline hover:decoration-indigo-500"
         }`;
 
