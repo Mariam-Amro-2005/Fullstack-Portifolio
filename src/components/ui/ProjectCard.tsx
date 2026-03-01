@@ -45,13 +45,19 @@ export default function ProjectCard(data: ProjectItem) {
                         </p>
                     </div>
 
-                    <div className="flex flex-col gap-4 mb-3">
+                    <div className="flex flex-col gap-4 ">
                         <p className="text-lg font-semibold">Technology Stack</p>
-                        <ul className="flex flex-row list-disc list-inside marker:text-indigo-600 marker:text-lg text-gray-500 gap-4 w-fit flex-wrap">
+                        {/* <ul className="flex flex-row list-disc list-inside marker:text-indigo-600 marker:text-lg text-gray-500 gap-4 w-fit flex-wrap">
                             {data.tech.map((desc, index) => (
                                 <li key={index} className={`border bg-linear-to-tr rounded-full py-1.25 px-3 pr-4 mr-0.5 font-medium text-nowrap ${theme === 'dark' ? 'text-gray-200 border-gray-800 from-gray-800/70 via-gray-500/80 to-gray-800/70' : 'text-black border-purple-400  from-white via-purple-200 to-indigo-200'} hover:scale-105 transform duration-300 ease-in-out`}>{desc}</li>
                             ))}
-                        </ul>
+                        </ul> */}
+                        <p>
+                            {data.tech.map((tag, index) => (
+                                <span key={index} className={`inline-block text-md font-medium rounded-full py-1 px-3 mr-2 mb-2 border
+                                ${theme == "dark" ? "bg-blue-600/20 text-gray-300 border-blue-800" : "bg-purple-400/20 text-indigo-600/85 border-purple-400/70"}`}> {tag}</span>
+                            ))}
+                        </p>
                     </div>
 
                     <div className="flex flex-row gap-4">

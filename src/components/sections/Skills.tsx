@@ -48,7 +48,7 @@ export default function Skills(data: SkillsProps) {
                             </div>
                             <ul className="flex flex-row list-disc list-inside marker:text-indigo-600 marker:text-lg text-gray-500 gap-4 w-fit flex-wrap">
                                 {skill.skills.map((item, itemIndex) => (
-                                    <li key={itemIndex} className={`w-48 text-start border bg-linear-to-tr rounded-xl py-1.25 px-3 pr-4 mr-0.5 font-medium text-nowrap ${theme === 'dark' ? 'text-gray-200 border-gray-800 from-gray-800/70 via-gray-500/80 to-gray-800/70' : 'text-black border-indigo-200 hover:border-purple-400  hover:from-white hover:via-purple-200 hover:to-indigo-200'} hover:scale-105 transform duration-300 ease-in-out`}>{item}</li>
+                                    <li key={itemIndex} className={`w-48 text-start border bg-linear-to-tr rounded-xl py-1.25 px-3 pr-4 mr-0.5 font-medium text-nowrap ${theme === 'dark' ? 'bg-blue-600/20 text-gray-300 border-blue-800' : 'text-black border-indigo-200'} hover:scale-105 transform duration-300 ease-in-out`}>{item}</li>
                                 ))}
                             </ul>
                         </div>
