@@ -3,7 +3,6 @@ import Container from "../ui/Container";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AboutProps } from "@/lib/types";
 
@@ -11,22 +10,6 @@ export default function About(
     { photo="", name = "", bio = "", linkedin = "#", github = "#", email = "#", phone = "#", resume = "#" }: AboutProps
 ) {
     const { theme } = useTheme();
-    const [mounted, setMounted] = useState(false);
-
-    // Prevent hydration mismatch
-    useEffect(() => {
-        setMounted(true);
-    }, []);
-
-    if (!mounted) {
-        return (
-            <>
-                <Container>
-                    <div className="text-9xl text-black text-center">Error Loading Page</div>
-                </Container>
-            </>
-        );
-    }
 
     return (
         <Container>

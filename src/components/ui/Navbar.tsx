@@ -22,6 +22,14 @@ export default function Navbar() {
     useEffect(() => {
         const observers: IntersectionObserver[] = [];
 
+        // use a lower threshold and rootMargin so fairly small or partially hidden
+        // sections (e.g. projects header/content) still count as active. the
+        // negative top margin compensates for the sticky navbar height.
+        const options: IntersectionObserverInit = {
+            threshold: 0.2,
+            rootMargin: '-80px 0px 0px 0px',
+        };
+
         sections.forEach((id) => {
             const element = document.getElementById(id);
             if (!element) return;
@@ -32,7 +40,7 @@ export default function Navbar() {
                         setActive(id);
                     }
                 },
-                { threshold: 0.6 }
+                options
             );
 
             observer.observe(element);
@@ -58,7 +66,20 @@ export default function Navbar() {
                 </div>
 
                 {sections.map((id) => (
-                    <Link key={id} href={`#${id}`} className={linkStyle(id)}>
+                    <Link
+                        key={id}
+                        href={`#${id}`}
+                        className={linkStyle(id)}
+                        onClick={(e) => {
+                            // prevent Next.js from doing a full navigation to the same
+                            // page; scroll manually so we can account for the sticky nav
+                            e.preventDefault();
+                            const target = document.getElementById(id);
+                            if (target) {
+                                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                        }}
+                    >
                         {id.charAt(0).toUpperCase() + id.slice(1)}
                     </Link>
                 ))}
