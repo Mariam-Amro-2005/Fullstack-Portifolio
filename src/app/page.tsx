@@ -22,7 +22,7 @@ export default function Home() {
       <Education {...education}/>
       <Experience {...experience} />
       <Projects {...project}/>
-      <Skills />
+      <Skills {...skill}/>
       <Achievements />
       <Testimonials />
       <Contact />

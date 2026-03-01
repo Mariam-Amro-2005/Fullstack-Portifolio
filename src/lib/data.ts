@@ -144,7 +144,7 @@ const ReelVerse: ProjectItem = {
     startDate: "Jul 2025",
     endDate: "Jul 2025",
     githubLink: "https://github.com/Mariam-Amro-2005/ReelVerse",
-    liveLink: "https://reel-verse-ey15psv51-mariam-seifs-projects.vercel.app/"
+    liveLink: "https://reel-verse-one.vercel.app/"
 }
 
 const LMS: ProjectItem = {
@@ -240,7 +240,7 @@ const SoftSkills: SkillsItem = {
 
 export const skill: SkillsProps = {
     skills: [FrontendSkills, BackendSkills, ProgrammingSkills, 
-        AISkills, VisualizationSkills, FrameworkSkills, SoftSkills]
+        AISkills, VisualizationSkills, FrameworkSkills]
 }
 
 const MindersAchievment: AchievementItem = {
