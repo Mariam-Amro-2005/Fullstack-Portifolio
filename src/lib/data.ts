@@ -1,5 +1,5 @@
 import { Languages } from "lucide-react";
-import { AboutProps, AchievementItem, AchievementsProps, ContactProps, EducationItem, EducationProps, ExperienceItem, ExperienceProps, HeroProps, ProjectItem, ProjectsProps, SkillsItem, SkillsProps } from "./types";
+import { AboutProps, AchievementItem, AchievementsProps, CertificationsProps, ContactProps, EducationItem, EducationProps, ExperienceItem, ExperienceProps, HeroProps, ProjectItem, ProjectsProps, SkillsItem, SkillsProps } from "./types";
 
 const Linkedin = "https://www.linkedin.com/in/mariam-seifeldin/";
 const Github = "https://github.com/Mariam-Amro-2005";
@@ -259,6 +259,10 @@ const MindersAchievment: AchievementItem = {
 
 export const achievement: AchievementsProps = {
     achievements: []
+}
+
+export const certificate: CertificationsProps = {
+    certifications: []
 }
 
 export const contact: ContactProps = {
