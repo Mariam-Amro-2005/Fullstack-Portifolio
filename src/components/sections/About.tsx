@@ -95,7 +95,7 @@ export default function About(
 
                         <div className="flex flex-col justify-start gap-5 max-w-3/4 sm:max-w-full lg:max-w-2/3">
                             <h1 className="text-start w-full text-xl font-bold">Connect with Me</h1>
-                            <div className="flex flex-row w-full justify-between">
+                            <div className="flex flex-row w-full justify-between max-w-sm">
                                 <Link href={`${linkedin}`} target="_blank" rel="noopener noreferrer" >
                                     <div className={`border border-gray-300 w-fit h-fit rounded-full hover:bg-linear-to-tr ${theme == "dark" ? " shadow-gray-600 hover:from-indigo-800 hover:via-indigo-600 hover:to-blue-950" : "shadow-gray-500 hover:from-purple-600 hover:via-violet-400 hover:to-indigo-500 hover:border-purple-600"} hover:border-gray-400 p-3 transition duration-300 hover:shadow-md`}>                                        
                                         <Image
