@@ -29,7 +29,7 @@ export default function Achievements(data: AchievementsProps) {
 
                 </div>
 
-                <div>
+                <div className="flex flex-col gap-10">
                     {data.achievements.map((ach, index) => (
                         <AchievementCard key={index} {...ach} />
                     ))}

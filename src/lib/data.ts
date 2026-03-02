@@ -1,4 +1,3 @@
-import { Languages } from "lucide-react";
 import { AboutProps, AchievementItem, AchievementsProps, CertificationsProps, ContactProps, EducationItem, EducationProps, ExperienceItem, ExperienceProps, HeroProps, ProjectItem, ProjectsProps, SkillsItem, SkillsProps } from "./types";
 
 const Linkedin = "https://www.linkedin.com/in/mariam-seifeldin/";

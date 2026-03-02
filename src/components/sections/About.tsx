@@ -36,7 +36,7 @@ export default function About(
                     </div>
                 </div>
 
-                <div className="w-full flex md:flex-row flex-col items-center justify-around gap-15">
+                <div className="w-full flex md:flex-row flex-col items-center md:items-start justify-around gap-15">
                     <div className="flex flex-row lg:w-80 md:w-180 h-80 rounded-full overflow-hidden bg-linear-to-r from-pink-500 to-indigo-600 p-1.5">
                         <div className="w-full h-full rounded-full overflow-hidden">
                             <motion.div

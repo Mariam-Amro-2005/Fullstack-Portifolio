@@ -1,8 +1,10 @@
 "use client";
 import Container from "../ui/Container";
-import { useTheme } from "next-themes"; 
+import { useTheme } from "next-themes";
+import { CertificationsProps } from "@/lib/types";
+import CertificationCard from "../ui/CertificationCard";
 
-export default function Certifications() {
+export default function Certifications(data: CertificationsProps) {
     const { theme } = useTheme();
     return (
         <Container>
@@ -25,6 +27,12 @@ export default function Certifications() {
                         <span className="inline-block w-15 h-1 bg-linear-to-r from-indigo-500 to-indigo-600"></span>
                     </div>
 
+                </div>
+
+                <div className="flex flex-col gap-10">
+                    {data.certifications.map((cert, index) => (
+                        <CertificationCard key={index} {...cert} />
+                    ))}
                 </div>
             </section>
         </Container>
