@@ -85,9 +85,9 @@ export default function Navbar() {
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex items-center justify-center">
                     <div className="flex items-center border border-slate-300 backdrop-blur-md shadow-sm rounded-full px-6 py-3 gap-6">
-                        <div className="cursor-pointer hover:text-indigo-600 transition font-medium">
+                        {/* <div className="cursor-pointer hover:text-indigo-600 transition font-medium">
                             Portfolio
-                        </div>
+                        </div> */}
 
                         {sections.map((id) => (
                             <Link
@@ -106,10 +106,10 @@ export default function Navbar() {
 
                 {/* Mobile Navigation */}
                 <div className="md:hidden flex items-center justify-between">
-                    <div className="flex items-center border border-slate-300 backdrop-blur-md shadow-sm rounded-full px-4 py-2">
-                        <div className="cursor-pointer hover:text-indigo-600 transition font-medium mr-2">
+                    <div className="flex items-center border border-slate-300 backdrop-blur-md shadow-sm rounded-full px-2 py-2">
+                        {/* <div className="cursor-pointer hover:text-indigo-600 transition font-medium mr-2">
                             Portfolio
-                        </div>
+                        </div> */}
                         <ThemeToggle />
                     </div>
 
