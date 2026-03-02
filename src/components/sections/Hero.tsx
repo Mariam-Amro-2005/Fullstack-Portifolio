@@ -69,7 +69,7 @@ export default function Hero({ name="", typingWords=[""], location="", email="#"
 
                 <div className="flex w-full justify-center items-center">
                     <div className={`flex flex-row w-fit bg-linear-to-tr border ${theme == "dark" ? "border-indigo-700 shadow-gray-700 from-indigo-800 via-indigo-600 to-blue-950": "shadow-gray-400 from-purple-600 via-violet-500 to-indigo-600 border-purple-500"} rounded-full py-2.5 px-6 text-white text-lg font-semibold align-center justify-center items-center shadow-md  hover:scale-105 transition duration-400 cursor-pointer`}>
-                        <Link href={`${email}`} target="_blank" rel="noopener noreferrer" className="flex flex-row gap-3 items-center font-sans">
+                        <Link href={`mailto:${email}`} target="_blank" rel="noopener noreferrer" className="flex flex-row gap-3 items-center font-sans">
                             <span className="flex flex-row">
                                 <Image
                                     src="/icons/icons8-email-100 (1).png"
