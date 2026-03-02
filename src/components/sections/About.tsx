@@ -13,7 +13,7 @@ export default function About(
 
     return (
         <Container>
-            <section id="about" className="h-auto w-full relative px-10 py-20 flex flex-col items-center justify-around text-center font-sans">
+            <section id="about" className="max-w-6xl h-auto w-full relative px-10 py-20 flex flex-col items-center justify-around text-center font-sans">
                 <div className="flex flex-col items-center justify-center mb-10">
                     <h1 className={`
                         absolute text-7xl md:text-8xl lg:text-[10rem] uppercase font-extrabold top-12.75 lg:-top-10 -z-10

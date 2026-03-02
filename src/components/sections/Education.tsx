@@ -11,7 +11,7 @@ export default function Education(educationData: EducationProps) {
     const totalItems = educationData.educations.length;
     return (
         <Container>
-            <section id="education" className="relative h-auto py-20 flex flex-col items-center justify-center text-center font-sans">
+            <section id="education" className="max-w-6xl relative h-auto py-20 flex flex-col items-center justify-center text-center font-sans">
                 <div className="flex flex-col w-full items-center justify-center mb-10">
                     <h1 className={`
                         absolute uppercase font-extrabold top-12.75 lg:-top-10 -z-10

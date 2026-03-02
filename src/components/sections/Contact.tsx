@@ -10,7 +10,7 @@ export default function Contact(data: ContactProps) {
     const { theme } = useTheme();
     return (
         <Container>
-            <section id="contact" className="relative w-full h-auto py-20 flex flex-col items-center justify-center text-center font-sans">
+            <section id="contact" className="max-w-6xl relative w-full h-auto py-20 flex flex-col items-center justify-center text-center font-sans">
                 <div className="flex flex-col w-full items-center justify-center mb-16">
                     <h1 className={`
                         absolute uppercase font-extrabold top-12.75 lg:-top-10 -z-10

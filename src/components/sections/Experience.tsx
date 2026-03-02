@@ -11,7 +11,7 @@ export default function Experience(experience: ExperienceProps) {
 
     return (
         <Container>
-            <section id="experience" className="relative w-full h-auto py-20 flex flex-col items-center justify-center text-center font-sans">
+            <section id="experience" className="max-w-7xl relative w-full h-auto py-20 flex flex-col items-center justify-center text-center font-sans">
                 <div className="flex flex-col w-full items-center justify-center mb-10">
                     <h1 className={`
                         absolute uppercase font-extrabold top-12.75 lg:-top-10 -z-10
@@ -32,7 +32,7 @@ export default function Experience(experience: ExperienceProps) {
 
                 </div>
 
-                <div>
+                <div className="max-w-6xl">
                     {experience.experiences.map((exp, index) => (
                         <ExperienceCard key={index} {...exp} />
                     ))}

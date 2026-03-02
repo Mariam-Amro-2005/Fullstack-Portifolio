@@ -9,7 +9,7 @@ export default function Skills(data: SkillsProps) {
 
     return (
         <Container>
-            <section id="skills" className="relative w-full h-auto py-20 flex flex-col items-center justify-center text-center font-sans">
+            <section id="skills" className="max-w-6xl relative w-full h-auto py-20 flex flex-col items-center justify-center text-center font-sans">
                 <div className="flex flex-col items-center justify-center mb-10">
                     <h1 className={`
                         absolute text-7xl md:text-8xl lg:text-[10rem] uppercase font-extrabold top-12.75 lg:-top-10 -z-10
